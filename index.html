@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>To Do List</title>
+</head>
+<body>
+    <header>
+        <h1>Список дел</h1>
+        <div class="special">
+            <input id='themeDark' type="checkbox">Тёмная тема
+        </div>
+            <div class="inputQuest">
+                <input id='input' type='text' placeholder="Введите дело...">
+                <button id='newQuest' onclick='addNewQuest()'>Добавить</button>
+            </div>
+    </header>
+    <div id="questList">
+        
+    </div>
+    <footer>
+        <button id='deleteDone' onclick='deleteDone()'>Удалить сделанные</button>
+        <button id='deleteAll' onclick='deleteAll()'>Удалить все</button>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
