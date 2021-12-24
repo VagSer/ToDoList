@@ -12,7 +12,7 @@ input.addEventListener('keydown', function(event){
 })
 
 function addNewQuest(){
-    if (input.value != '') {
+    if (input.value !== '') {
         let divParent = document.createElement('div')
         let divChild = document.createElement('div')
         let deleteButton = document.createElement('button')
@@ -58,10 +58,5 @@ function deleteDone(){
 }
 
 function deleteAll(){
-    const quest = document.getElementsByClassName('quest')
-
-    for (let i=0; i<quest.length; i++) {
-        quest[i].remove()
-        i--
-    }
+    document.querySelector('#questList').innerHTML=''
 }
