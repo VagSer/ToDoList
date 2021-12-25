@@ -13,9 +13,9 @@ input.addEventListener('keydown', function(event){
 
 function addNewQuest(){
     if (input.value !== '') {
-        let divParent = document.createElement('div')
-        let divChild = document.createElement('div')
-        let deleteButton = document.createElement('button')
+        const divParent = document.createElement('div')
+        const divChild = document.createElement('div')
+        const deleteButton = document.createElement('button')
         divParent.className = 'quest'
         divParent.innerHTML = '<div>'+input.value+'</div>'
         deleteButton.className = 'deleteButton'
@@ -47,7 +47,6 @@ function changeTheme(e) {
 
 function deleteDone(){
     const quest = document.getElementsByClassName('quest')
-
     for (let i=0; i<quest.length; i++) {
         
         if (quest[i].classList.contains('done')) {
