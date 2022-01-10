@@ -10,20 +10,17 @@
 <body>
     <header>
         <h1>Список дел</h1>
-        <div class="special">
-            <input id='themeDark' type="checkbox">Тёмная тема
-        </div>
             <div class="inputQuest">
-                <input id='input' type='text' placeholder="Введите дело...">
-                <button id='newQuest' onclick='addNewQuest()'>Добавить</button>
+                <input class="inputQuest__input" id='input' type='text' placeholder="Введите дело...">
+                <button class="inputQuest__button" id='newQuest' onclick='addNewQuest()'>Добавить</button>
             </div>
     </header>
-    <div id="questList">
-        
+    <div id="questList">    
     </div>
     <footer>
         <button id='deleteDone' onclick='deleteDone()'>Удалить сделанные</button>
         <button id='deleteAll' onclick='deleteAll()'>Удалить все</button>
+        <input id='themeDark' type="checkbox">Тёмная тема
     </footer>
     <script src="app.js"></script>
 </body>
