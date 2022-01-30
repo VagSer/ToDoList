@@ -136,3 +136,48 @@ footer {
     background-color: darkgreen;
     box-shadow: 0 0 5px darkgreen;
 }
+
+.themeDark{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.themeDark:before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 10px;
+    background-color: grey;
+}
+
+.themeDark__checkbox {
+    position: absolute;
+    appearance : none;
+}
+
+.themeDark__icon {
+    position: absolute;
+    left: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: rgb(255, 196, 0);
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.themeDark__icon:before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 100%;
+}
+
+.themeDark__checkbox:checked ~ .themeDark__icon{
+    left: 35px;
+    background-color: rgb(4, 0, 255);
+}

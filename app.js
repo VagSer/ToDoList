@@ -2,11 +2,11 @@ const questList = document.getElementById('questList')
 const input = document.getElementById('input')
 const newQuest = document.getElementById('newQuest')
 const deleteAllDone = document.getElementById('deleteDone')
-const themeDark = document.getElementById('themeDark')
+const themeDark = document.querySelector('.themeDark__checkbox')
 
 themeDark.addEventListener('change', changeTheme, false)
 
-input.addEventListener('keydown', function(event){
+input.addEventListener('keydown', (event) => {
     if(event.key === "Enter")
     addNewQuest();
 })
@@ -17,13 +17,13 @@ function addNewQuest(){
         const divChild = document.createElement('div')
         const deleteButton = document.createElement('button')
         divParent.className = 'quest'
-        divParent.innerHTML = '<div>'+input.value+'</div>'
+        divParent.innerHTML = `<div>${input.value}</div>`
         deleteButton.className = 'deleteButton'
         deleteButton.innerHTML = 'Убрать'
-        deleteButton.addEventListener('click', function(){
+        deleteButton.addEventListener('click', () => {
             divParent.remove()
         })
-        divParent.addEventListener('click', function(){
+        divParent.addEventListener('click', () => {
             if (divParent.classList.contains('done')) {
                 divParent.classList.remove('done')
             } else (divParent.classList.add('done'))
